@@ -1,0 +1,41 @@
+<div class="container my-5">
+    <h1 class="mb-3" style="font-weight: bold;">Edit Package</h1>
+  
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updatePack()">
+  
+          <div class="mb-3">
+            <label for="packId" class="form-label" style="font-weight: bold;">Pack Id</label>
+            <input type="text" class="form-control" id="packId" readonly name="packId"  [(ngModel)]="packDetails.packId">
+          </div>
+  
+          <div class="mb-3">
+            <label for="packName" class="form-label" style="font-weight: bold;">Pack Name</label>
+            <input type="text" class="form-control" id="packName" name="packName" [(ngModel)]="packDetails.packName">
+          </div>
+  
+          <div class="mb-3">
+            <label for="duration" class="form-label" style="font-weight: bold;">Duration ( In Days )</label>
+            <input type="number" class="form-control" id="duration" name="duration" [(ngModel)]="packDetails.duration">
+          </div>
+  
+          <div class="mb-3">
+            <label for="price" class="form-label" style="font-weight: bold;">Price ( In Rupees )</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="packDetails.price">
+          </div>
+  
+          <button type="submit" class="btn btn-primary " style="margin-right: 10px;">Save Data</button>
+  
+          <button type="button" class="btn btn-danger" (click)="deletePack(packDetails.packId)">Delete Data</button>
+  
+        </form>
+      </div>
+      <div *ngIf="validationerror" class="alert alert-danger">
+        <div *ngFor="let val of validationerror"><li>{{ val }}</li> </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  

@@ -1,0 +1,51 @@
+.main {
+    background-image: url('src\assets\banners\banner1.jpg');
+    margin-top: 2px;
+  }
+  .top-content{
+    background-color: #98bcce;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    align-items:center;
+    height: 60px;
+    box-shadow: 3px 3px 5px lightblue;
+}
+.abc{
+    display: none;
+}
+.body1{
+  margin:20px;
+  padding:20px;
+  background-color: lightgray;
+  display: grid;
+}
+/* .body2{
+  margin:20px;
+  padding:20px;
+  background-color: lightgray;
+
+}
+.body3{
+  margin:20px;
+  padding:20px;
+  background-color: lightgray;
+}
+.body4{
+  margin:20px;
+  padding:20px;
+  background-color: lightgray;
+} */
+img{
+  padding: 2px;
+  margin:5px;
+  border-radius: 5px;
+  border-style:inset;
+  size:15px;
+  height: 150px;
+  width: 250px;
+
+}

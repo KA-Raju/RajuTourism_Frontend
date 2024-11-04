@@ -1,0 +1,181 @@
+
+<div class="main">
+    <br> <br>
+    <h5 style="text-align: center;font-size:250%; font-family: 'Brush Script MT', cursive;">Welcome to Raju Tours and
+      Travels</h5>
+    <br>
+    <div>
+      <input class="abc" type="radio" name="details" id="check1" checked>
+      <input class="abc" type="radio" name="details" id="check2">
+      <input class="abc" type="radio" name="details" id="check3">
+      <input class="abc" type="radio" name="details" id="check4">
+      <div class="top-content">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="check1" class="btn" (click)="photos()">All Photos</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="check2" class="btn" (click)="uploads()">Upload Photo</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+      </div>
+      <div class="body1" *ngIf="showphotos">
+        <div>
+          <div *ngFor="let photo of photoslist">
+            <img src="{{photo}}" alt="Image" style="float: left;">
+          </div>
+        </div>
+      </div>
+  
+      <div class="body1" *ngIf="showupload">
+  
+        <div class="row">
+          <div class="col-4" style="margin-left: 10%;">
+            <div><img [src]="url" style="height: 250; width:200"></div>
+          </div>
+  
+          <!-- <label for="">encided</label>
+          <textarea name="" id="" cols="30" rows="10">{{ encoded }}</textarea>
+          <label for="">url</label>
+        <textarea name="" id="" cols="30" rows="10">{{ url }}</textarea> -->
+  
+          <div class="col-4" style="margin-top:3%;">
+            <form #form="ngForm" (ngSubmit)="uploadimage()" [formGroup]="uploadform">
+  
+              <!-- <label for="FileName" class="form-label" style="font-weight: bold; ">Photo Name</label>
+    <input type="text" class="form-control" id="FileName" name="FileName" placeholder="Enter Photo Name" formControlName="FileName" pattern="[a-zA-Z0-9]*.[a-z]*" [(ngModel)]="uploadPhotoRequest.FileName">
+    <div *ngIf="uploadform.controls['FileName'].invalid && (uploadform.controls['FileName'].dirty || uploadform.controls['FileName'].touched)" class="alert">
+  
+      <span style="color:red">Please Enter Valid Photo Name</span>
+  </div>
+  </div> -->
+  
+              <!-- <div class="mb-3">
+    <label for="FilePath" class="form-label" style="font-weight: bold;">Photo Url</label>
+    <input type="text" class="form-control" id="FilePath" name="FilePath" formControlName="FilePath" placeholder="Enter Photo Url" [(ngModel)]="uploadPhotoRequest.FilePath">
+    <div *ngIf="uploadform.controls['FilePath'].invalid && (uploadform.controls['FilePath'].dirty || uploadform.controls['FilePath'].touched)" class="alert">
+  
+      <span style="color:red">Please Enter Photo URL</span>
+  
+      [disabled]="uploadform.invalid"
+  </div>
+  </div> -->
+  
+              <div><input type="file" (change)="imageUpload($event)"></div>
+              <br><br>
+              <div><button type="submit" class="btn btn-success">Upload</button></div>
+  
+  
+  
+  
+            </form>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  
+    <br>
+  
+  
+  
+    <!-- <br>
+  <div>
+    <input class="abc" type="radio" name="details" id="check1" checked>
+    <input class="abc" type="radio" name="details" id="check2">
+    <input class="abc" type="radio" name="details" id="check3">
+    <input class="abc" type="radio" name="details" id="check4">
+    <div class="top-content">
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="check1" class="btn" (click)="all()">All Photos</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="check2" class="btn" (click)="aruku()">Aruku Photos</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="check3" class="btn " (click)="lambasingi()">lambasingi Photos</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="check4" class="btn " (click)="vizag()">Vizag Photos </label>
+    </div>
+    <div class="body">
+      <div *ngIf="showall">
+        <div class="body1">
+          <img src="assets/1.jpg" alt="l1 pic">
+          <img src="assets/2.jpg" alt="l1 pic">
+          <img src="assets/3.jpg" alt="l1 pic">
+          <img src="assets/v5.jpg" alt="v1 pic">
+          <img src="assets/v6.jpg" alt="v1 pic">
+          <img src="assets/v7.jpg" alt="v1 pic">
+          <img src="assets/v8.jpg" alt="v1 pic">
+          <img src="assets/v9.jpg" alt="v1 pic">
+          <img src="assets/4.jpg" alt="l1 pic">
+          <img src="assets/10.jpg" alt="l1 pic">
+          <img src="assets/11.jpg" alt="l1 pic">
+          <img src="assets/12.jpg" alt="l1 pic">
+          <img src="assets/l1.jpg" alt="l1 pic">
+          <img src="assets/l2.jpg" alt="l2 pic">
+          <img src="assets/5.jpg" alt="l1 pic">
+          <img src="assets/6.jpg" alt="l1 pic">
+          <img src="assets/7.jpg" alt="l1 pic">
+          <img src="assets/8.jpg" alt="l1 pic">
+          <img src="assets/9.jpg" alt="l1 pic">
+          <img src="assets/l3.jpg" alt="l3 pic">
+          <img src="assets/l4.jpg" alt="l4 pic">
+          <img src="assets/l5.jpg" alt="l5 pic">
+          <img src="assets/l6.jpg" alt="l6 pic">
+          <img src="assets/l7.jpg" alt="l7 pic">
+          <img src="assets/lambasingi.jpg" alt="l8 pic">
+          <img src="assets/v1.jpg" alt="v1 pic">
+          <img src="assets/v2.jpg" alt="v1 pic">
+          <img src="assets/v3.jpg" alt="v1 pic">
+          <img src="assets/v4.jpg" alt="v1 pic">
+          <img src="assets/v10.jpg" alt="v1 pic">
+        </div>
+      </div>
+      <div *ngIf="showaruku">
+        <div class="body2">
+          <img src="assets/1.jpg" alt="1 pic">
+          <img src="assets/2.jpg" alt="2 pic">
+          <img src="assets/3.jpg" alt="3 pic">
+          <img src="assets/4.jpg" alt="4 pic">
+          <img src="assets/5.jpg" alt="5 pic">
+          <img src="assets/6.jpg" alt="6 pic">
+          <img src="assets/7.jpg" alt="7 pic">
+          <img src="assets/8.jpg" alt="8 pic">
+          <img src="assets/9.jpg" alt="9 pic">
+          <img src="assets/10.jpg" alt="10 pic">
+          <img src="assets/11.jpg" alt="11 pic">
+          <img src="assets/12.jpg" alt="12 pic">
+        </div>
+  
+      </div>
+      <div *ngIf="showlam">
+        <div class="body3">
+          <img src="assets/l1.jpg" alt="l1 pic">
+          <img src="assets/l2.jpg" alt="l2 pic">
+          <img src="assets/l3.jpg" alt="l3 pic">
+          <img src="assets/l4.jpg" alt="l4 pic">
+          <img src="assets/l5.jpg" alt="l5 pic">
+          <img src="assets/l6.jpg" alt="l6 pic">
+          <img src="assets/l7.jpg" alt="l7 pic">
+          <img src="assets/lambasingi.jpg" alt="l8 pic">
+        </div>
+      </div>
+      <div *ngIf="showvizag">
+        <div class="body4">
+          <img src="assets/v1.jpg" alt="v1 pic">
+          <img src="assets/v2.jpg" alt="v1 pic">
+          <img src="assets/v3.jpg" alt="v1 pic">
+          <img src="assets/v4.jpg" alt="v1 pic">
+          <img src="assets/v5.jpg" alt="v1 pic">
+          <img src="assets/v6.jpg" alt="v1 pic">
+          <img src="assets/v7.jpg" alt="v1 pic">
+          <img src="assets/v8.jpg" alt="v1 pic">
+          <img src="assets/v9.jpg" alt="v1 pic">
+          <img src="assets/v10.jpg" alt="v1 pic">
+        </div>
+      </div>
+    </div> -->
+  

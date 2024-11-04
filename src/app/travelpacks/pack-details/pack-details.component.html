@@ -1,0 +1,183 @@
+
+<div class="main ">
+    <div class="row">
+            <div class="col-md-8">
+                    <div class="imgstyle">
+                            <img class="img-fluid" src="assets\OIP.jpg" alt="">
+
+                    </div>
+                    <div class="details">
+                            <h6 style="font-weight: bold; font-size: medium;">Duration :<span>2</span> </h6>
+                            <h6 style="font-weight: bold; font-size: medium;">Price : <span>Rs 5500 + ( tax ) ( per person ) /-</span></h6>
+
+                    </div>
+                    <div>
+                            <input class="abc" type="radio" name="details" id="check1" checked>
+                            <input class="abc" type="radio" name="details" id="check2">
+                            <input class="abc" type="radio" name="details" id="check3">
+                            <input class="abc" type="radio" name="details" id="check4">
+                            <div class="top-content">
+                                    <label for="check1" class="btn" (click)="iternity()">ITIERNITY</label>
+                                    <label for="check2" class="btn" (click)="packageincludes()">PACKAGE
+                                            INCLUDES</label>
+                                    <label for="check3" class="btn " (click)="packageexcludes()">PACKAGE
+                                            EXCLUDES</label>
+                                    <label for="check4" class="btn " (click)="contact()">CONTACT</label>
+                            </div>
+
+                    </div>
+                    <div class="body">
+                            <div *ngIf="itShowme">
+                                    <h5 style="font-weight: bold; font-size: large;">ITIERNITY</h5>
+                                    <br>
+                                    <h6 style="font-weight: bold; font-size: medium;">Tour package for vizag and Aruku day Trip</h6>
+                                    <p><b>Day 1:-(Vizag Local Site Seeing)</b></p>
+                                    <p>
+                                            Upon Arrival In the morning You Will Be Met By Our CAR driver And
+                                            Transferred To
+                                            Hotel/Resort.after fresh up you go for local
+                                            visit Bheemunipatnam, Rushikonda,Kailashgiri,R.K Beach,Fishing
+                                            Harbor,Submarine
+                                            Museum,Visakha Museum Return Back To Hotel/Resort And Overnight Stay At
+                                            The
+                                            Hotel/Resort.
+                                    </p>
+                                    <p><b>Day 2:-Vizag- Araku( Rail Cum Road / car )</b></p>
+                                    <p>Check Out Of The Hotel And Transfer To Railways Station For Onward Journey To
+                                            Araku
+                                            Valley.Enjoy The Train Journey To borracaves Covering Around 40 Tunnels,
+                                            Bridges And
+                                            Various Landscapes.Upon Arrival At borracaves You Will Be Picked Up And
+                                            Proceed Further
+                                            For The Site Seeing Of Following Places Of Interest:Borracaves,coffee
+                                            plantations,galikonda view point, Araku TribalMuseum,Gardens,
+                                            Drop back at vizag.</p>
+                                    <p><b>katiki waterfalls:</b></p>
+                                    <p>Note: Our vehicles will not go to katiki waterfalls near borra caves because
+                                            of bad road
+                                            conditions.Only jeeps go till a certain point to reach katiki waterfalls
+                                            . from that
+                                            point you will have to cross a railway bridge and trek for 4 km up and
+                                            down. If you
+                                            intend you may perform this on your own</p>
+                                    <p><b>We assure to provide best services.</b></p>
+                                    <br><br>
+                                    <p><b>Best Regards,</b></p>
+                                    <br><br>
+                                    <p><b>K A Raju</b></p>
+                                    <br>
+                                    <p><b>9493387837</b></p>
+                            </div>
+                            <div *ngIf="inShowme">
+                                    <p><b>The Package includes:</b></p>
+                                    <p>Booking Inclusions<br>
+
+                                            1 night stay at vizag on day 1 in 1 ac room at mvv/imilar
+                                            <br>
+                                            ac indica for all transfers and site seeing
+                                            <br>
+                                            Train from vizag to araku ( Subject of avaliblity )
+                                            <br>
+                                            Breakafst for 1 days
+                                    </p>
+                            </div>
+                            <div *ngIf="exShowme">
+                                    <p><b>The Package excludes:</b></p>
+                                    <p>Booking Exclusions
+                                            <br>
+                                            Lunch and dinner
+                                            <br>
+                                            all entry charges during site seeing
+                                            <br>
+                                            visit to katiki waterfalls
+                                    </p>
+                            </div>
+                            <div *ngIf="conShowme">
+                                    <p><b>NEED HELP</b></p>
+                                    <p>949*****37</p>
+                                    <p>rajukantumuchu@gmail.com</p>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4 ">
+                    <div class="right1">
+                            <h4 style="color:green; ">NEED HELP ?</h4>
+                            <p>94******37,90******63</p>
+                            <p>rajukantumuchu@gmail.com</p>
+                    </div>
+                    <div class="right2">
+                            <h4 style="color:green; font-size: 30px;">Quick Enquriy</h4>
+                            <div>
+                              <form #form="ngForm" (ngSubmit)="addEnquiryMethod()" [formGroup]="enquiryform">
+                                <div class="mb-3">
+                                  <label for="name" class="form-label" style="font-weight: bold; "> Name</label>
+                                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" formControlName="name" pattern="[a-zA-Z ]*" [(ngModel)]="enquirybody.name">
+                                  <div *ngIf="enquiryform.controls['name'].invalid && (enquiryform.controls['name'].dirty || enquiryform.controls['name'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Name</span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="mobileNumber" class="form-label" style="font-weight: bold;">Mobile Number</label>
+                                  <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" pattern="[6,7,8,9]{1}[0-9]{9}" formControlName="mobileNumber" [(ngModel)]="enquirybody.mobileNumber">
+                                  <div *ngIf="enquiryform.controls['mobileNumber'].invalid && (enquiryform.controls['mobileNumber'].dirty || enquiryform.controls['mobileNumber'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Mobile Number</span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="email" class="form-label" style="font-weight: bold;">Email</label>
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter Name" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="enquirybody.email">
+                                  <div *ngIf="enquiryform.controls['email'].invalid && (enquiryform.controls['email'].dirty || enquiryform.controls['email'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Email </span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="travelDate" class="form-label" style="font-weight: bold;">Travel Date</label>
+                                  <input type="date" class="form-control" id="travelDate" name="travelDate" formControlName="travelDate" [(ngModel)]="enquirybody.travelDate">
+                                  <div *ngIf="enquiryform.controls['travelDate'].invalid && (enquiryform.controls['travelDate'].dirty || enquiryform.controls['travelDate'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Date </span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="duration" class="form-label" style="font-weight: bold;">Duration (in Days)</label>
+                                  <input type="number" class="form-control" id="duration" name="duration" pattern="[1-9]{1}" formControlName="duration" [(ngModel)]="enquirybody.duration">
+                                  <div *ngIf="enquiryform.controls['duration'].invalid && (enquiryform.controls['duration'].dirty || enquiryform.controls['duration'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Date </span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="noOfAdults" class="form-label" style="font-weight: bold;">No of Adults</label>
+                                  <input type="number" class="form-control" id="noOfAdults" name="noOfAdults" pattern="[1-9]{1}" formControlName="noOfAdults" [(ngModel)]="enquirybody.noOfAdults">
+                                  <div *ngIf="enquiryform.controls['noOfAdults'].invalid && (enquiryform.controls['noOfAdults'].dirty || enquiryform.controls['noOfAdults'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Number </span>
+                                </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="specialNote" class="form-label" style="font-weight: bold;">Special Note</label>
+                                  <input type="text" class="form-control" id="specialNote" name="specialNote" placeholder="Enter Details" formControlName="specialNote" [(ngModel)]="enquirybody.specialNote">
+                                  <div *ngIf="enquiryform.controls['specialNote'].invalid && (enquiryform.controls['specialNote'].dirty || enquiryform.controls['specialNote'].touched)" class="alert">
+
+                                    <span style="color:red">Please Enter Valid Text </span>
+                                </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" [disabled]="enquiryform.invalid">Enquiry</button>
+                                </form>
+                            </div>
+
+                    </div>
+
+            </div>
+    </div>
+</div>

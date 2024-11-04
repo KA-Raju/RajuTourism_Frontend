@@ -1,0 +1,26 @@
+.main {
+    padding: 20px 20px;
+    background-color: #f2f2f2
+}
+  .left{
+    background-image: url('src\assets\banners\banner1.jpg');
+    border-style: double;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .right1{
+    padding: 15px;
+    margin-top: 20px;
+    background-color: azure;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+  .right2{
+    padding: 15px;
+    margin-top: 20px;
+    background-color: azure;
+    border-radius: 5px;
+    text-align: center;
+  }

@@ -1,0 +1,70 @@
+
+<div class="container container-styles">
+    <div class="col-xs-7 col-xs-offset-3">
+      <br><br>
+      <div class="panel panel-primary">
+                    <div class="panel-heading" style="text-align: center;"><h1>{{ title }}</h1></div>
+                <div class="panel-body padding">
+            <form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group" >
+                    <label for="name" class="col-xs-4 control-label" style="text-align:left"><b>Name</b></label>
+  
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" placeholder="Enter Name" formControlName="name" pattern="[a-zA-Z ]*"  [(ngModel)]="registerRequest.name">
+                    </div>
+                    <div *ngIf="registerForm.controls['name'].invalid && (registerForm.controls['name'].dirty || registerForm.controls['name'].touched)" class="alert">
+  
+                      <span style="color:red">Please enter name</span>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="mob" class="col-xs-4 control-label" style="text-align:left"><b>Mobile Number</b></label>
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" placeholder="Enter Mobile Number"  formControlName="mobileNo" pattern="[6,7,8,9]{1}[0-9]{9}" [(ngModel)]="registerRequest.mobileNo">
+                    </div>
+                    <div *ngIf="registerForm.controls['mobileNo'].invalid && (registerForm.controls['mobileNo'].dirty || registerForm.controls['mobileNo'].touched)" class="alert">
+  
+                      <span style="color:red">Please enter mobile number</span>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="email" class="col-xs-4 control-label" style="text-align:left"><b>Email</b></label>
+                    <div class="col-xs-8">
+                      <input type="email" class="form-control" placeholder="Enter Email"  formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="registerRequest.email">
+                    </div>
+                    <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="alert">
+  
+                      <span style="color:red">Please enter email</span>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="pwd" class="col-xs-4 control-label" style="text-align:left"><b>Password</b></label>
+                    <div class="col-xs-8">
+                      <input [type]="changetype?'password':'text'" class="form-control" placeholder="Enter password" formControlName="password" [(ngModel)]="registerRequest.password">
+                      <span class="eyeicon"><i (click)="viewpassword()" [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                    </div>
+                    <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)" class="alert">
+  
+                      <span style="color:red">Please enter password</span>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <span class="col-xs-4"></span>
+                    <div class="col-xs-3">
+  
+                      <button (click)="onSubmit()" type="button" class="btn btn-primary">Register</button>
+                      &nbsp;
+                      <button type="button" class="btn btn-link" (click)="formReset()"> Clear</button>
+                    </div>
+                  </div>
+                <br>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  

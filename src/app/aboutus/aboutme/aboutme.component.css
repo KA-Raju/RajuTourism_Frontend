@@ -1,0 +1,9 @@
+.body1
+{
+    text-align: center;
+  overflow:auto;
+  background-size: cover;
+  opacity:100px ;
+  position: relative;
+  background-image: url('src\assets\banners\banner1.jpg');
+}

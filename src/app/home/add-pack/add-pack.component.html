@@ -1,0 +1,41 @@
+<div class="container my-5">
+    <h1 class="mb-3" style="font-weight: bold;">Add New Package</h1>
+  
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="addpack()" [formGroup]="addform">
+          <div class="mb-3">
+            <label for="packName" class="form-label" style="font-weight: bold; ">Pack Name</label>
+            <input type="text" class="form-control" id="packName" name="packName" placeholder="Enter Pack Name" formControlName="packName" pattern="[a-zA-Z ]*" [(ngModel)]="addPackRequest.packName">
+            <div *ngIf="addform.controls['packName'].invalid && (addform.controls['packName'].dirty || addform.controls['packName'].touched)" class="alert">
+  
+              <span style="color:red">Please Enter Valid Pack Name</span>
+          </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="duration" class="form-label" style="font-weight: bold;">Duration (in Days)</label>
+            <input type="number" class="form-control" id="duration" name="duration" formControlName="duration" pattern="[1-9]{1}"[(ngModel)]="addPackRequest.duration">
+            <div *ngIf="addform.controls['duration'].invalid && (addform.controls['duration'].dirty || addform.controls['duration'].touched)" class="alert">
+  
+              <span style="color:red">Please Enter Valid Duration</span>
+          </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="price" class="form-label" style="font-weight: bold;">Price (in Rupees)</label>
+            <input type="number" class="form-control" id="price" name="price" formControlName="price" pattern="[1-9]{1}[0-9]{3}" [(ngModel)]="addPackRequest.price">
+            <div *ngIf="addform.controls['price'].invalid && (addform.controls['price'].dirty || addform.controls['price'].touched)" class="alert">
+  
+              <span style="color:red">Please Enter Valid Price </span>
+          </div>
+          </div>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="addform.invalid">Add Package</button>
+  
+        </form>
+      </div>
+    </div>
+  
+  </div>
+  

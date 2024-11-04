@@ -1,0 +1,201 @@
+<div class="main ">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="imgstyle">
+          <img class="img-fluid" src="assets\h5.jpg" alt="">
+  
+        </div>
+        <div class="details">
+          <h6 style="font-weight: bold; font-size: medium;">Hotel Details:<span>2</span> </h6>
+          <h6 style="font-weight: bold; font-size: medium;">Price(for 24Hrs) : <span>Rs 5500 + ( tax ) ( per person )
+              /-</span></h6>
+  
+        </div>
+        <div>
+          <input class="abc" type="radio" name="details" id="check1" checked>
+          <input class="abc" type="radio" name="details" id="check2">
+          <input class="abc" type="radio" name="details" id="check3">
+          <input class="abc" type="radio" name="details" id="check4">
+          <div class="top-content">
+            <label for="check1" class="btn" (click)="iternity()">ITIERNITY</label>
+            <label for="check2" class="btn" (click)="packageincludes()">ROOM DETAILS & AMENINTIES</label>
+            <label for="check3" class="btn " (click)="packageexcludes()">PROPERTY HIGHLIGHTS
+            </label>
+            <label for="check4" class="btn " (click)="contact()">CONTACT</label>
+          </div>
+  
+        </div>
+        <div class="body">
+          <div *ngIf="itShowme">
+            <h5 style="font-weight: bold; font-size: large;">ITIERNITY</h5>
+            <br>
+  
+            <h6 style="font-weight: bold; font-size: medium;"> Novotel Visakhapatnam Varun Beach</h6>
+  
+            <p><b>Hotel that makes every moment matter</b></p>
+            <p>
+              Spoil yourself in 5-star seafront luxury at Novotel Visakhapatnam Varun Beach hotel. Spare contemporary
+              design makes your room a calm haven, and picture windows offer you dazzling Bay of Bengal views. Rise and
+              shine with a dip in the infinity pool and breakfast with an ocean backdrop at the lavish Indian and Western
+              buffet at Novotel.
+            </p>
+            <p>
+              The hotel shares a close proximity with the city railway station, Rushikonda Beach, Vizag Port and major
+              hospitals. The popular Submarine Museum is just a walk away. The hotel's city centre location makes it
+              approachable from industrial and business hubs. Novotel Vizag forms part of a complex consisting of an INOX
+              multiplex, night club and mall. Novotel Visakhapatnam Varun Beach is among the only hotels in Visakhapatnam
+              near a beach. The hotel offers calming views of the sea from every nook and corner.
+            </p>
+            <p>
+              Welcome to Novotel Visakhapatnam Varun Beach! Enjoy and Relax your stay by the Beach. Overlooking a
+              picturesque panoramic view of the Bay of Bengal.
+  
+              Lakshmi Sridhar, Hotel Manager
+            </p>
+            <br><br>
+            <p><b>Best Regards,</b></p>
+  
+            <p><b>K A Raju</b></p>
+            <p><b>9493387837</b></p>
+          </div>
+          <div *ngIf="inShowme">
+            <p><b>Room details and Amenities</b></p>
+            <p>
+              The hotel features 255 luxurious and elegantly designed rooms with modern amenities such as free Wi-Fi,
+              laundry service, a babysitting facility and currency exchange options.
+              The hotel features Superior Rooms spread across an area of 312 sq. ft with a queen bed or two twin beds and
+              plush sofas.
+              Premium Rooms are spread over an area of 355 sq. ft and feature a glass-wall bathroom, a business desk,
+              comfortable sofas along with other upscale amenities.
+              The Executive Suites are ultra-spacious accommodations spread over an area of 710 sq. ft with a separate
+              living room and a stunning ocean view.
+              The property rooms were given thumbs up by more than 100 travellers.
+            </p>
+  
+          </div>
+          <div *ngIf="exShowme">
+            <p><b>Property Highlights:</b></p>
+            <p>
+              The hotel has a lovely outdoor swimming pool, which is ideal for a relaxed and refreshing day.</p>
+            <p>The hotel has seven meeting rooms that can accommodate medium to large groups and are well-suited for
+              seminars and celebrations.</p>
+            <p>The hotel has a fully-equipped fitness centre and gymnasium, ideal for working out those muscles and
+              staying fit.</p>
+            <p>The hotel facilitates wheelchair access to the differently-abled guests.</p>
+            <p>The property also offers Wi-Fi in the communal areas at a nominal charge.</p>
+            <p>The property allows on-site parking for your convenience.
+  
+            </p>
+          </div>
+          <div *ngIf="conShowme">
+            <p><b>NEED HELP</b></p>
+            <p>949*****37</p>
+            <p>rajukantumuchu@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="right1">
+          <h4 style="color:green; ">NEED HELP ?</h4>
+          <p>94******37,90******63</p>
+          <p>rajukantumuchu@gmail.com</p>
+        </div>
+        <div class="right2">
+          <h4 style="color:green; font-size: 30px;">Quick Enquriy For Hotels</h4>
+          <div>
+            <form #form="ngForm" (ngSubmit)="addEnquiryMethod()" [formGroup]="enquiryform">
+              <div class="mb-3">
+                <label for="name" class="form-label" style="font-weight: bold; "> Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name"
+                  formControlName="name" pattern="[a-zA-Z ]*" [(ngModel)]="enquirybody.name">
+                <div
+                  *ngIf="enquiryform.controls['name'].invalid && (enquiryform.controls['name'].dirty || enquiryform.controls['name'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Name</span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="mobileNumber" class="form-label" style="font-weight: bold;">Mobile Number</label>
+                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber"
+                  pattern="[6,7,8,9]{1}[0-9]{9}" formControlName="mobileNumber" [(ngModel)]="enquirybody.mobileNumber">
+                <div
+                  *ngIf="enquiryform.controls['mobileNumber'].invalid && (enquiryform.controls['mobileNumber'].dirty || enquiryform.controls['mobileNumber'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Mobile Number</span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="email" class="form-label" style="font-weight: bold;">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Name"
+                  formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  [(ngModel)]="enquirybody.email">
+                <div
+                  *ngIf="enquiryform.controls['email'].invalid && (enquiryform.controls['email'].dirty || enquiryform.controls['email'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Email </span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="travelDate" class="form-label" style="font-weight: bold;">CheckIn Date</label>
+                <input type="date" class="form-control" id="travelDate" name="travelDate" formControlName="travelDate"
+                  [(ngModel)]="enquirybody.travelDate">
+                <div
+                  *ngIf="enquiryform.controls['travelDate'].invalid && (enquiryform.controls['travelDate'].dirty || enquiryform.controls['travelDate'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Date </span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="duration" class="form-label" style="font-weight: bold;">Duration (in Days)</label>
+                <input type="number" class="form-control" id="duration" name="duration" pattern="[1-9]{1}"
+                  formControlName="duration" [(ngModel)]="enquirybody.duration">
+                <div
+                  *ngIf="enquiryform.controls['duration'].invalid && (enquiryform.controls['duration'].dirty || enquiryform.controls['duration'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Date </span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="noOfAdults" class="form-label" style="font-weight: bold;">No of Adults</label>
+                <input type="number" class="form-control" id="noOfAdults" name="noOfAdults" pattern="[1-9]{1}"
+                  formControlName="noOfAdults" [(ngModel)]="enquirybody.noOfAdults">
+                <div
+                  *ngIf="enquiryform.controls['noOfAdults'].invalid && (enquiryform.controls['noOfAdults'].dirty || enquiryform.controls['noOfAdults'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Number </span>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="specialNote" class="form-label" style="font-weight: bold;">Purpose of Visit</label>
+                <input type="text" class="form-control" id="specialNote" name="specialNote" placeholder="Enter Details"
+                  formControlName="specialNote" [(ngModel)]="enquirybody.specialNote">
+                <div
+                  *ngIf="enquiryform.controls['specialNote'].invalid && (enquiryform.controls['specialNote'].dirty || enquiryform.controls['specialNote'].touched)"
+                  class="alert">
+  
+                  <span style="color:red">Please Enter Valid Text </span>
+                </div>
+              </div>
+  
+              <button type="submit" class="btn btn-primary" [disabled]="enquiryform.invalid">Enquiry</button>
+            </form>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

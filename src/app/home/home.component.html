@@ -1,0 +1,193 @@
+<!----- Start Slider Part ------>
+
+<div class="slider">
+    <div class="slider-left">
+      <div class="slider-left-h2">Raju Tours and Travels...</div>
+      <div class="slider-left-p">Raju Tours and Travels(RTT) is establishing new facilities while upgrading the existing
+        ones, introducing new products and enhancing the quality of services to meet the growing expectations of tourists
+        and the challenges of the future!
+      </div>
+    </div>
+  </div>
+  <!----- End Slider Part ------>
+  
+  
+  <div class="rajudiv">
+    <div style="background-color: rgba(255,204,34,0.5); padding:20px;">
+      <div >
+        <button style="background-color:#585050;color:white;float: right; padding:10px 30px;margin-top: 8px; border-radius: 5px;"
+        routerLink="addpack">Add Pack</button>
+        <p class="slider-right-h3">PACK DETAILS</p>
+  
+      </div>
+      <!-- <div class="col-4">
+  
+      </div> -->
+    </div>
+    <div style="margin: 10px;">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <!-- <th class="xy">PackId</th> -->
+            <th class="xy">PackName</th>
+            <th class="xy">Duration</th>
+            <th class="xy">Price</th>
+            <th class="xy"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pack of packslist">
+            <!-- <td>{{ pack.packId }}</td> -->
+            <td>{{ pack.packName }}</td>
+            <td>{{ pack.duration }}</td>
+            <td>{{ pack.price }}</td>
+            <td><a [routerLink]="['editpack', pack.packId ]"
+                style="text-decoration: none;font-weight: bold ;color:rgb(77, 70, 7); font-family: Verdana, Geneva, Tahoma, sans-serif;">View
+                & Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="validationerror" class="alert alert-danger">
+      {{ validationerror }}
+    </div>
+  </div>
+  
+  <!------ Start Content  ------>
+  <div class="content">
+    <div class="content-h2" style="color:white">WHY BOOK WITH US</div>
+    <div class="content-h4">Raju Tours and Travels(RTT) is establishing new facilities while upgrading the existing ones,
+      introducing new products and enhancing the quality of services to meet the growing expectations of tourists and the
+      challenges of the future!</div>
+    <div class="content-parts">
+      <div class="content-parts-icons"><i class="fa fa-inr" style="padding-top:5px;"></i></div>
+      <div class="content-parts-h3">Best Price Guarantee</div>
+      <div class="content-parts-p">Raju Tours and Travels gives the best price for your winter tours.</div>
+    </div>
+    <div class="content-parts">
+      <div class="content-parts-icons"><i class="fa fa-book"></i></div>
+      <div class="content-parts-h3">Easy Booking</div>
+      <div class="content-parts-p">Raju Tours and Travels Website is easy to book and travel.</div>
+    </div>
+    <div class="content-parts">
+      <div class="content-parts-icons"><i class="fa fa-support"></i></div>
+      <div class="content-parts-h3">24/7 Customer Care</div>
+      <div class="content-parts-p">Our customer satisfaction is our first priority....! We are available 24/7</div>
+    </div>
+  </div>
+  <!------ End Content  ------->
+  
+  
+  <!------- Start Content Part 2  -------->
+  <div class="content-part-2">
+    <div class="content-part-2-h3">New Destinations</div>
+    <div class="border-bottom"></div>
+  
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\6.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Vizag + Devarapalli falls</div>
+      <div class="content-part-2-sub-p">Vizag + Devarapalli falls is of 3 days Trip. Best Waterfall to Vist in Andhra
+        Pradesh</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>4500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\banners\banner1.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Aruku</div>
+      <div class="content-part-2-sub-p">Aruku is of 3 days Trip. Best Place to Vist and Explore in winter in Andhra
+        Pradesh</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>4000.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\l2.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Lambasingi</div>
+      <div class="content-part-2-sub-p">Lambasingi is of 2 days Trip. Best View point to Vist in winterin Andhra Pradesh
+      </div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>1500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\4.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Lambasingi + Devarapalli Falls</div>
+      <div class="content-part-2-sub-p">Lambasingi and Devarapalli is of 2 days Trip. Best Places to Vist in Andhra
+        Pradesh</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>4500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\l5.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Devarapalli Falls</div>
+      <div class="content-part-2-sub-p">Devarapalli Waterfalls is of 1 day Trip. Best Waterfall to Vist in Andhra Pradesh
+      </div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>1500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+  
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\l7.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Vizag + Devarapalli falls</div>
+      <div class="content-part-2-sub-p">Vizag + Devarapalli falls is of 3 days Trip. Best Waterfall to Vist in Andhra
+        Pradesh</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>4500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\v1.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Vizag</div>
+      <div class="content-part-2-sub-p">Vizag is of 3 days Trip. Visakhapatnam is a city of Destiny of the Andhra Pradesh
+        .</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>4000.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Aruku" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-2-sub">
+      <div align="center"><img src="assets\v3.jpg" width="260" height="170"></div>
+      <div class="content-part-2-sub-h4">Aruku+Vizag</div>
+      <div class="content-part-2-sub-p">Vizag and Aruku is 4days Trip. Best palces to vist in the winter season with
+        friends and family .</div>
+      <div class="content-part-2-sub-price">From <span class="fa fa-inr"></span>5500.00/-</div>
+      <div><a routerLink="travelpacks/Vizag+Devarapallifalls" class="content-part-2-sub-btn">Book Now</a></div>
+    </div>
+  </div>
+  <!------- End Content Part 2  --------->
+  
+  <!------- Start Content Part 3  --------->
+  <div class="content-part-3">
+    <div class="content-part-2-h3">Hotels &amp; Restaurants</div>
+    <div class="border-bottom"></div>
+  
+    <div class="content-part-3-left"><img src="assets\h1.jpg" width="300" height="180"></div>
+    <div class="content-part-3-right">
+      <div class="content-part-3-right-h4">Novotal Hotel</div>
+      <div class="content-part-3-right-p">Novotal is a 5 Star Hotel. Luxuious and Radiant Hotel in the Visakhapatanam.
+      </div>
+      <div class="content-part-3-right-price">1 Day : <span class="fa fa-inr"></span>15000.00/-</div>
+      <div><a href="hotels/hoteldetails" class="content-part-3-right-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-3-left"><img src="assets\h2.jpg" width="300" height="180"></div>
+    <div class="content-part-3-right">
+      <div class="content-part-3-right-h4">Radiason Hotel </div>
+      <div class="content-part-3-right-p">Radiason Hotel is a 5 Star Hotel. Luxuious and Radiant Hotel in the
+        Visakhapatanam.</div>
+      <div class="content-part-3-right-price">1 Day : <span class="fa fa-inr"></span>14500.00/-</div>
+      <div><a href="hotels/hoteldetails" class="content-part-3-right-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-3-left"><img src="assets\h8.jpg" width="300" height="180"></div>
+    <div class="content-part-3-right">
+      <div class="content-part-3-right-h4">RamaChandra Restaurent</div>
+      <div class="content-part-3-right-p">RamaChandra Restaurent is a 3 Star Hotel. Best Restaurent in the Visakhapatanam.
+      </div>
+      <div class="content-part-3-right-price">1 Day : <span class="fa fa-inr"></span>4000.00/-</div>
+      <div><a href="hotels/hoteldetails" class="content-part-3-right-btn">Book Now</a></div>
+    </div>
+    <div class="content-part-3-left"><img src="assets\h4.jpg" width="300" height="180"></div>
+    <div class="content-part-3-right">
+      <div class="content-part-3-right-h4">Gandhi hotel</div>
+      <div class="content-part-3-right-p">gandhi Hotel is a 3 Star Hotel. Luxuious and Radiant Hotel in the Aruku and
+        Visakhapatanam.</div>
+      <div class="content-part-3-right-price">1 Day : <span class="fa fa-inr"></span>12500.00/-</div>
+      <div><a href="hotels/hoteldetails" class="content-part-3-right-btn">Book Now</a></div>
+    </div>
+  </div>
+  <!------- End Content Part 3  --------->
+  

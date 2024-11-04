@@ -1,0 +1,62 @@
+
+<div class="container container-styles">
+    <div class="col-xs-7 col-xs-offset-3">
+      <br><br>
+      <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align: center;"><h2>{{ title }}</h2></div>
+          <div class="panel-body padding">
+            <form class="form-horizontal" [formGroup]="loginForm">
+                        <div class="form-group" >
+                            <label for="email" class="col-xs-4 control-label" style="text-align:left"><b>Email</b></label>
+                            <div class="col-xs-8">
+                              <input type="email" class="form-control" placeholder="Enter Email"  formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </div>
+                            <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="alert">
+  
+                              <span style="color:red">Please enter email</span>
+  
+                          </div>
+                          <br>
+                          <!-- <label for="name" class="col-xs-4 control-label" style="text-align:left">User Name</label>
+                          <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="Enter Username" formControlName="userName">
+                          </div>
+                          <div *ngIf="loginForm.controls['userName'].invalid && (loginForm.controls['userName'].dirty || loginForm.controls['userName'].touched)" class="alert">
+  
+                            <span style="color:red">Please enter username</span>
+                        </div>
+                        </div>
+                        <br> -->
+                        <div class="form-group">
+                          <label for="password" class="col-xs-4 control-label" style="text-align:left"><b>Password</b></label>
+                          <div class="col-xs-8">
+                            <input [type]="changetype?'password':'text'" class="form-control" name="password" placeholder="Enter Password" formControlName="password">
+                            <span class="eyeicon"><i (click)="viewpassword()" [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+  
+                          </div>
+                          <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert">
+  
+                            <span style="color:red">Please enter password</span>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <span class="col-xs-4"></span>
+                          <div class="col-xs-3">
+                            <button (click)="onSubmit()" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+                          </div>
+                        </div>
+                        <p>New to Raju Winter Tourism? <a style="color: blue; cursor: pointer;" (click)="navRegs()">Register</a></p>
+  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+  
+  
+  
+  
+  

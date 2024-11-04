@@ -1,0 +1,41 @@
+
+
+.main {
+    padding:20px;
+     background-image: url('src\assets\banners\banner1.jpg');
+    margin-top: 2px;
+  }
+  div {
+    border-radius: 0px;
+  }
+  .tr.td{
+    border-left: 2px;
+  }
+  .card{
+    background-color: rgb(213, 236, 236);
+    margin-left: 5px;
+  }
+
+
+
+  .row{
+    padding:10px;
+    margin:10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  img{
+    border-radius: 5px;
+  }
+  .pricetag{
+    animation-name: pricetag;
+    animation-duration:1s;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+    animation-iteration-count: 150;
+  }
+  @keyframes pricetag {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }

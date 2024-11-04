@@ -1,0 +1,102 @@
+.topheader{
+    background-color: rgb(193, 189, 186);
+    height: 45px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  
+  }
+  .top{
+    padding: 10px;
+  }
+  .vertical-line{
+    border-left: 1px solid rgb(78, 75, 75);
+    height: 50px;
+    padding: 5px;
+  }
+  .header{
+      background-image: url('src\assets\banners\nature_landscape.jpg');
+      height: 140px;
+  }
+  .navbar{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 60px;
+  }
+  
+  @media (max-width: 640px) {
+   /* .container {
+      text-align: center;
+    } */
+  
+    .navbar {
+      flex-direction: row;
+      text-align: center;
+      background-color: white;
+    }
+  
+    .navbar a {
+      flex-direction: row;
+  
+    }
+  
+  }
+  .mb-2{
+    padding-left: 10px;
+    background-color: #f8f9fa;
+  }
+  .shadow {
+      text-shadow: 3px 3px 2px rgb(50, 47, 47);
+  }
+  .title-styles{
+      text-align: center;
+    padding-top: 35px;
+      color: rgb(242, 237, 237);
+      font-size: 60px
+  }
+  .img1{
+    margin-left: 10px;
+    height:50px;
+  }
+  
+  
+  a.xyz:link, a:visited {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 25px;
+    }
+  
+    a.xyz:hover, a:active {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 15px;
+    }
+    a.abc:link, a:visited {
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+    }
+  
+    a.abc:hover, a:active {
+      background-color: rgb(194, 95, 126);
+      color: white;
+    }
+    a.hij:link, a:visited {
+      background-color: rgb(231, 146, 43);
+      color: rgb(96, 48, 48);
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display:inline-block;
+      border-radius: 10px;
+    }
+  
+    a.hij:hover, a:active {
+      background-color: darkcyan;
+      color: white;
+      border-radius: 10px;
+    }
+  

@@ -1,0 +1,51 @@
+<div>
+    <input class="abc" type="radio" name="details" id="check1" checked>
+    <input class="abc" type="radio" name="details" id="check2">
+    <div class="top-content">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="check1" class="btn" (click)="aboutfounder()">About Founder</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="check2" class="btn" (click)="aboutcompany()">About Company</label>
+    </div>
+
+</div>
+<div class="body">
+    <div *ngIf="Showme">
+        <div class="body1">
+            <h2>About us</h2>
+            <img src="assets/founderimage.jpg" alt="Founder Image"
+                style="width:150px; height:180px;border-radius: 5px; border: 2px solid black;">
+                <br><br>
+            <p style="font-size: 180%;"><u>Founder</u> : <B>K A Raju</B></p>
+            <p>The Raju Winter Tourism is founded in the year 2019.Successfully compeleted 3 years in this field. Our
+                first priority is our customer satisfaction </p>
+            <p> Raju Winter Toruism is purely based on the winter locations.... We are the holiday planners in vizag we
+                operate both domistic and internation and local packages</p>
+                <br><br>
+            <h4><b><u>Office Address :</u></b></h4>
+            <p><i>Plot:XYZ,</i></p>
+            <p><i>Gajuwaka,</i></p>
+            <p><i>Visakhapatnam, Andhra Pradesh</i></p>
+            <p><i>Pincode: 5300**</i></p>
+        </div>
+    </div>
+    <div *ngIf="Showcom">
+        <div class="body2">
+            <p>Raju Tours and Travels has built an impressive infrastructure: hotels, resorts, transport fleet and
+                amenities to promote an array of tourist activity. Excellent facilities that offer value for money
+                includes hotels and resorts, wayside amenities, transport, information & reservation centers/kiosks,
+                culturally vibrant sound & light shows, leisure boating, pleasure cruises with facilities such as
+                conferencing and catering, and above all a journey of heritage discovery.</p>
+            <p>Raju Tours and Travels(RTT) is establishing new facilities while upgrading the existing ones, introducing
+                new products and enhancing the quality of services to meet the growing expectations of tourists and the
+                challenges of the future!</p>
+        </div>
+    </div>
+

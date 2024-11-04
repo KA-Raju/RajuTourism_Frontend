@@ -1,0 +1,31 @@
+.container-styles{
+    background-image: url('src\assets\banners\banner1.jpg');
+    opacity: .9;
+    width:50%;
+    border-radius:5px;
+    margin-top:20px;
+    margin-bottom:20px;
+  
+  }
+  .container{
+    background-color: black;
+  }
+  .padding{
+    padding-bottom:0px;
+    margin-bottom:0px;
+  }
+  
+  .link-underline{
+     color:#337ab7;
+      text-decoration: underline;
+  }
+  input.ng-invalid.ng-touched{
+    border: 2px solid red;
+  }
+  .eyeicon{
+    position:relative;
+    right: -570px;
+    top: -30px;
+    cursor: pointer;
+  }
+  
